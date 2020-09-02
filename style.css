@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Lexend+Peta&display=swap');
+
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+
+body , html {
+	width: 100%;
+	height: 100%;
+	font-family: 'Lexend Peta', sans-serif;
+}
+
+#content{
+	display: flex;
+	flex-direction: row-reverse;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#mobile-icon, #mobile-menu-bloc {
+	display: none;
+
+}
+
+
+/* ************************************* RIGHT_CONTENT ************************************************/
+
+
+#right-content {
+	width: 50%;
+	text-align: center;
+}
+
+#background {
+  background-color: hsl(207, 33%, 95%);
+  height: 50%;
+  border-bottom-left-radius: 40px;  
+}
+
+#nav-bar-links {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding : 3rem 0 8rem 0 ;
+}
+#nav-bar-links a {
+	font-size: 0.7rem; ;
+	padding: 0 1.2rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: hsl(230, 29%, 20%);
+}
+
+#nav-bar-links a:hover{
+	text-decoration: underline;
+}
+
+#login  {
+	margin-left: 2.5rem;
+	color: #A0A0A0 !important;
+}
+
+#illustration-image {
+	max-width: 50rem;
+	margin-left: 3rem;
+}
+
+/* ************************************* LEFT_CONTENT ************************************************/
+
+#left-content {
+	width: 50%;
+}
+
+
+#left-content-inside {
+	width: 80%;
+	margin: auto;
+	margin-top: 4rem;
+}
+
+#logo {
+	margin-bottom: 10rem;
+}
+
+#left-content h2 {
+	font-size: 0.8rem;
+	font-weight: 200;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #A0A0A0;
+	margin-bottom: 1rem;
+}
+
+#new {
+	background-color: hsl(230, 29%, 20%);
+	color: white;
+	padding: 0.2rem 0.3rem;
+	margin-right: 0.2rem;
+	border-radius: 20px;
+	text-align: center;
+}
+#left-content h1 {
+	font-weight: 900;
+	text-transform: uppercase;	
+	color: hsl(230, 29%, 20%);
+	margin-bottom: 2rem;
+}
+#left-content p {
+
+	color: #A0A0A0;
+    font-size: 0.8rem;
+	margin-bottom: 3.3rem;
+}
+
+#button-line{
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+}
+
+#button {
+	background-color: hsl(0, 100%, 68%) ; 
+	color : white !important;
+	padding: 0.7rem;
+	margin-right: 0.6rem;
+	border-radius: 12px;
+
+	cursor: pointer;
+	transition-duration: 3000;
+}
+
+#button:hover {
+	opacity: 0.7;
+}
+
+
+/*****************************************   MEDIA QUERY ****************************************/
+
+
+@media only screen and (max-width: 800px) {
+ 
+
+#logo , #nav-bar-links {
+	display: none;
+}
+#content{
+	flex-direction: column;
+}
+#left-content {
+	width: 100%;
+}
+#right-content {
+	width: 100%;
+	text-align: center;
+}                                   
+#right-content-inside {
+	height: 100%;
+    width: 100%;
+	padding-bottom: 4rem; 	
+	 }
+
+#background {
+	background-color: transparent;
+	position: relative;
+}
+
+#background-mobile {
+	position: absolute;	
+	background-color: hsl(207, 33%, 95%);
+	z-index: -1;
+	right: 0;
+	width: 50%;
+	height: 35rem;
+	border-bottom-left-radius: 40px;
+}                               
+#illustration-image {
+	max-width: 45rem;
+	padding-bottom: 0;	
+}
+#mobile-icon {
+	display: flex;
+	justify-content: space-between;
+	padding: 3rem;
+}
+#mobile-icon img {
+	width: 2rem;
+	height: auto;
+	cursor: pointer;
+}
+#left-content h1 {
+	font-size: 1.4rem;	
+}
+#left-content p {
+	
+    font-size: 0.7rem;	
+}
+#left-content h2 {
+	font-size: 0.7rem;	
+}
+}
+
+/*****************************************   MOBILE MENU ****************************************/
+
+
+@media only screen and (max-width: 800px) { 
+
+#mobile-menu-bloc {
+	display: inherit;
+    position: absolute;
+
+	width: 70%;
+	left:  0;
+	right: -1500px;
+    margin-left:auto;
+    margin-right:auto;
+
+	
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+
+	transform: translateX( 0);
+	transition: transform 0.4s;
+} 
+
+.has-menu  #mobile-menu-bloc {
+
+transform: translateX(-750px);
+
+}
+
+#mobile-menu a {
+	display: flex;
+	flex-direction: column;
+    	
+    padding: 1rem 0 ;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: hsl(230, 29%, 20%);
+}
+
+#login-mobile {
+	
+	color: #A0A0A0 !important;
+
+}
+#mobile-menu a:hover{
+	text-decoration: underline;
+}
+
+}
+
+
+
+
+
